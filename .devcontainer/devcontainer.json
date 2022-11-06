@@ -1,0 +1,17 @@
+{
+    "name": "Ruby on Rails & Postgres",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "mounts": [
+        "source=vscode-extensions-apoex,target=/home/vscode/.vscode-server/extensions,type=volume"
+    ],
+    "forwardPorts": [
+        3000,
+        5432
+    ],
+    "remoteUser": "vscode",
+    "features": {
+        "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {}
+    }
+}

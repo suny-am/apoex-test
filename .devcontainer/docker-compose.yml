@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  app:
+    container_name: app-apoex
+    env_file: 
+     - .env
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+
+    volumes:
+      - ../..:/workspaces:cached
+      - vscode-extensions-apoex:/home/vscode/.vscode-server/extensions
+
+    command: sleep infinity
+
+    network_mode: service:db
+
+  db:
+    container_name: postgres-apoex
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./create-db-user.sql:/docker-entrypoint-initdb.d/create-db-user.sql
+    env_file:
+      - .env
+volumes:
+  postgres-data:
+  vscode-extensions-apoex:
