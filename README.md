@@ -1,11 +1,11 @@
 # Brewscope (ApoEx technical evaluation test)
 
-## author/maintainer
+## Author/maintainer
 
 - Carl Sandberg
-- contact: [visualarea.1@gmail.com](visualarea.1@gmail.com)
+- Contact: [visualarea.1@gmail.com](visualarea.1@gmail.com)
 
-## description 
+## Description 
 
 Technical evaluation test for Apoex AB fullstack development position.
 The goal was to make a small application that utilized the 
@@ -18,7 +18,7 @@ and various related information for users.
 - Connect to the docker container in a VS Code Remote Containers environment
 - Navigate to the "brewscope" application folder.
 - Launch the server with the "rails server" command.
-- navigate to [http://localhost:3000](http://localhost:3000)
+- Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## Task analysis
 
