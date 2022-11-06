@@ -13,7 +13,7 @@ The goal was to make a small application that utilized the
 and various related information for users.
 
 ## Usage
-- Clone this repo
+- Clone this repository
 - Connect to the docker container in a VS Code Remote Containers environment
 - Navigate to the "brewscope" application folder.
 - Launch the server with the "rails server" command.
