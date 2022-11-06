@@ -46,7 +46,9 @@ ruby routing config.
 
 ## Addendums
 
-A more fully featured (MVC) application was initially intended, but a more light
-weight solution was eventually preferred for the ask; allowing enough room for 
-increase of scope. The rails scaffolding was kept intact, with a simple "Beer" 
-migrated to the postgres database for potential use if wanted.
+A more fully featured (MVC) application was initially intended, but since
+the API is accessed via REST, the solution was considered too cumbersome for the 
+project. Instead, the application (with the effect of the applied routing solution)
+is essentially an SPA. The rails scaffolding was kept intact, with a simple "Beer" 
+Model migrated to the postgres database for potential use if wanted (accessible in REPL
+via the "rails console" command).
