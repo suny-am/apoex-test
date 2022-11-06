@@ -27,12 +27,12 @@ in most ways (integration of databases, routing expansion, middleware design and
 The Javascript implementation is designed to be kept modular and extensible by 
 clear segementation of functionality and structures (modules, types).
 
-## application testing
+## Application testing
 The application was tested by implementing proper try catch error handling in all 
 relevant sequences of the code. Anything above this was considered too elaborate
 in relation to the simplicity of the project.
 
-## addendums
+## Addendums
 
 A more fully featured (MVC) application was initially intended, but a more light
 weight solution was eventually preferred for the ask; allowing enough room for 
