@@ -13,6 +13,7 @@ The goal was to make a small application that utilized the
 and various related information for users.
 
 ## Usage
+
 - Clone this repository
 - Connect to the docker container in a VS Code Remote Containers environment
 - Navigate to the "brewscope" application folder.
@@ -35,6 +36,7 @@ The Javascript implementation is designed to be kept modular and extensible by
 clear segementation of functionality and structures (modules, types).
 
 ## Application testing
+
 The application was tested by implementing proper try catch error handling in all 
 relevant sequences of the code (mainly the API fetch sequences). 
 Anything above this was considered too elaborate in relation to the simplicity 
