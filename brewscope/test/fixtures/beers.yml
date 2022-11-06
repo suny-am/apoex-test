@@ -3,6 +3,7 @@
 one:
   id: 
   name: MyString
+  image_url: MyString
   description: MyText
   abv: 1.5
   food_pairing: MyString
@@ -10,6 +11,7 @@ one:
 two:
   id: 
   name: MyString
+  image_url: MyString
   description: MyText
   abv: 1.5
   food_pairing: MyString

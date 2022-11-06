@@ -1,11 +1,11 @@
 class CreateBeers < ActiveRecord::Migration[7.0]
   def change
     create_table :beers do |t|
-      t.integer :uid
-      t.string :name, array: true, default []
+      t.string :name
+      t.string :image_url
       t.text :description
-      t.float :abv  #Alcohol By Volume
-      t.string :food_pairing 
+      t.float :abv
+      t.string :food_pairing
 
       t.timestamps
     end
