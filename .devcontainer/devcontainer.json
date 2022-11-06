@@ -2,7 +2,7 @@
     "name": "Ruby on Rails & Postgres",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "workspaceFolder": "/workspaces/apoex_test/brewscope",
     "mounts": [
         "source=vscode-extensions-apoex,target=/home/vscode/.vscode-server/extensions,type=volume"
     ],
@@ -10,6 +10,7 @@
         3000,
         5432
     ],
+    "postAttachCommand": "fish",
     "remoteUser": "vscode",
     "features": {
         "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {}
