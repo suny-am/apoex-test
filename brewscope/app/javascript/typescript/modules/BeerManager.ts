@@ -1,7 +1,12 @@
+// predfined beer interface
 import { Beer } from '../interfaces'
 export default class BeerManager
 {
-    public async generateList(mainDisplay?: HTMLElement, beers?: Array<Beer>, pageList?: Array<Array<Beer>>, selectedPage?: string)
+    /*
+    | main function to generate the beer list for the client
+    */
+
+    public async generateList(mainDisplay?: HTMLElement, beers?: Array<Beer>, pageList?: Array<Array<Beer>>, selectedPage?: number)
     {
 
         // wip main display content if repopulating
@@ -67,7 +72,7 @@ export default class BeerManager
                 } else if (object.abv)
                 {
                     p.textContent = "ABV (Alchohol By Volume):"
-                    div.textContent = object.abv.toString()
+                    div.textContent = object.abv.toString() + "%"
                     beerBox.appendChild(p)
                     beerBox.appendChild(div)
                 } else
@@ -99,9 +104,48 @@ export default class BeerManager
             beerDetails.classList.add('hidden')
             beerBox.addEventListener('click', (Event) => this.showDetails(Event, beerDetails))
         })
-    } ƒ
+    }
 
-    // helper function to create set of 10 items for pagination
+    /*
+    | general fetch function
+    */
+
+    public async fetchBeers(request: Request)
+    {
+        return fetch(request).then((response) =>
+        {
+            try
+            {
+                return response.json()
+            } catch (err)
+            {
+                console.error(response.statusText, err)
+                throw new Error(response.statusText)
+            }
+        })
+    }
+
+    /*
+    | general helper function to wip the main display before display new 
+    | search results
+    */
+
+    public async cleanMainDisplay(mainDisplay: HTMLElement, userSearchNotice: string)
+    {
+        document.querySelector('pagination-title')?.remove()
+        document.querySelector('pagination-wrapper')?.remove()
+        mainDisplay.innerHTML = ""
+        let notice = document.createElement('p')
+        notice.classList.add('no-result-notice')
+        notice.textContent = userSearchNotice
+        mainDisplay.appendChild(notice)
+        return
+    }
+
+    /*
+    | helper function to create set of 10 items for pagination
+    */
+
     private * paginate(array: Array<Beer>, stride: number, size: number, offset = 0)
     {
         for (let i = offset; i < array.length; i += stride)
@@ -110,14 +154,20 @@ export default class BeerManager
         }
     }
 
-    // helper function to allow user to switch page of results
+    /*
+    | helper function to allow user to switch page of results
+    */
+
     private async changePage(mainDisplay: HTMLElement, pageList: Array<Array<Beer>>, Event: MouseEvent)
     {
-        let pageNumber = (Event.target as HTMLElement).textContent
+        let pageNumber = Number((Event.target as HTMLElement).textContent.toString()) - 1
         this.generateList(mainDisplay, null, pageList, pageNumber)
     }
 
-    // create page navigation controls for user if it does not exist
+    /*
+    | create page navigation controls for user if it does not exist
+    */
+
     private async createNavigation(mainDisplay: HTMLElement, pages: Array<Array<Beer>>)
     {
         if (!document.querySelector(".pagination-wrapper"))
@@ -139,7 +189,10 @@ export default class BeerManager
         }
     }
 
-    // helper function to show details of beer
+    /*
+    | helper function to show details of beer
+    */
+
     private async showDetails(Event: MouseEvent, beerDetails: HTMLElement)
     {
         if (beerDetails.classList.contains('hidden'))

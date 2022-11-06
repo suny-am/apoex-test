@@ -1,4 +1,4 @@
-# Brewscope
+# Brewscope (ApoEx technical evaluation test)
 
 ## author/maintainer
 
@@ -36,11 +36,15 @@ clear segementation of functionality and structures (modules, types).
 
 ## Application testing
 The application was tested by implementing proper try catch error handling in all 
-relevant sequences of the code. Anything above this was considered too elaborate
-in relation to the simplicity of the project.
+relevant sequences of the code (mainly the API fetch sequences). 
+Anything above this was considered too elaborate in relation to the simplicity 
+of the project.Furthermore, all 'GET' requests are redirected to the relevant 
+"/beers" page and all 'POST' requests are denied via a custom route guard in the
+ruby routing config.
 
 ## Addendums
 
 A more fully featured (MVC) application was initially intended, but a more light
 weight solution was eventually preferred for the ask; allowing enough room for 
-increase of scope
+increase of scope. The rails scaffolding was kept intact, with a simple "Beer" 
+migrated to the postgres database for potential use if wanted.

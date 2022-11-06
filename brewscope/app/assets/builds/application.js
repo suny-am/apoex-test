@@ -43,7 +43,7 @@
             beerBox.appendChild(div);
           } else if (object.abv) {
             p.textContent = "ABV (Alchohol By Volume):";
-            div.textContent = object.abv.toString();
+            div.textContent = object.abv.toString() + "%";
             beerBox.appendChild(p);
             beerBox.appendChild(div);
           } else {
@@ -71,13 +71,33 @@
         beerBox.addEventListener("click", (Event) => this.showDetails(Event, beerDetails));
       });
     }
+    async fetchBeers(request) {
+      return fetch(request).then((response) => {
+        try {
+          return response.json();
+        } catch (err) {
+          console.error(response.statusText, err);
+          throw new Error(response.statusText);
+        }
+      });
+    }
+    async cleanMainDisplay(mainDisplay, userSearchNotice) {
+      document.querySelector("pagination-title")?.remove();
+      document.querySelector("pagination-wrapper")?.remove();
+      mainDisplay.innerHTML = "";
+      let notice = document.createElement("p");
+      notice.classList.add("no-result-notice");
+      notice.textContent = userSearchNotice;
+      mainDisplay.appendChild(notice);
+      return;
+    }
     *paginate(array, stride, size, offset = 0) {
       for (let i = offset; i < array.length; i += stride) {
         yield array.slice(i, i + size);
       }
     }
     async changePage(mainDisplay, pageList, Event) {
-      let pageNumber = Event.target.textContent;
+      let pageNumber = Number(Event.target.textContent.toString()) - 1;
       this.generateList(mainDisplay, null, pageList, pageNumber);
     }
     async createNavigation(mainDisplay, pages) {
@@ -113,10 +133,10 @@
     async typeListen() {
       let searchQuery = document.querySelector(".search-field");
       let searchButton = document.querySelector(".search-button");
-      searchQuery.addEventListener("keyup", (Event) => this.checkInput(Event, searchQuery.value));
-      searchButton.addEventListener("click", (Event) => this.checkInput(Event, searchQuery.value));
+      searchQuery.addEventListener("keyup", (Event) => this.search(Event, searchQuery.value));
+      searchButton.addEventListener("click", (Event) => this.search(Event, searchQuery.value));
     }
-    async checkInput(Event, searchQuery) {
+    async search(Event, searchQuery) {
       if (Event instanceof KeyboardEvent) {
         if (Event.key !== "Enter") {
           return;
@@ -124,30 +144,32 @@
       }
       let mainDisplay = document.querySelector("#main-display");
       if (searchQuery === void 0 || searchQuery === null || searchQuery === "") {
-        mainDisplay.textContent = "Enter a search term to search for beers!";
+        beerManager.cleanMainDisplay(mainDisplay, "Enter a search term to search for beers!");
         return;
       }
       let request = new Request(punkApiRoot + `beer_name=${searchQuery}`);
-      fetch(request).then((response) => {
-        try {
-          response.body.getReader().read().then(async (value) => {
-            mainDisplay.innerHTML = "";
-            let buffer = await value.value.buffer;
-            let json = new TextDecoder().decode(buffer);
-            let beers = JSON.parse(json);
-            if (beers.length === 0) {
-              mainDisplay.textContent = "no search results...";
-              return;
-            }
-            console.log("Retrieved beer count: " + beers.length);
-            {
-              beerManager.generateList(mainDisplay, beers);
-            }
-          });
-        } catch (err) {
-          throw new Error(err);
+      let response = await beerManager.fetchBeers(request);
+      let beers = await response;
+      console.log("Beer list count: " + beers.length);
+      if (beers.length === 0) {
+        beerManager.cleanMainDisplay(mainDisplay, "No results found... try again!");
+        return;
+      }
+      if (beers.length === 80) {
+        let searchFinished = false;
+        for (let i = 2; searchFinished != true; i++) {
+          let recurseRequest = new Request(punkApiRoot + `page=${i}&beer_name=${searchQuery}`);
+          let response2 = await beerManager.fetchBeers(recurseRequest);
+          let moreBeers = await response2;
+          beers.push(moreBeers);
+          if (moreBeers.length < 80) {
+            searchFinished = true;
+          }
         }
-      });
+        beerManager.generateList(mainDisplay, await beers);
+      } else {
+        beerManager.generateList(mainDisplay, await beers);
+      }
     }
   };
 
