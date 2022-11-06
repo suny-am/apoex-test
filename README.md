@@ -40,7 +40,7 @@ clear segementation of functionality and structures (modules, types).
 The application was tested by implementing proper try catch error handling in all 
 relevant sequences of the code (mainly the API fetch sequences). 
 Anything above this was considered too elaborate in relation to the simplicity 
-of the project.Furthermore, all 'GET' requests are redirected to the relevant 
+of the project. Furthermore, all 'GET' requests are redirected to the relevant 
 "/beers" page and all 'POST' requests are denied via a custom route guard in the
 ruby routing config.
 
