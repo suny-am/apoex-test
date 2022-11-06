@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "ES2021",
+        "module": "es6",
+        "sourceMap": true,
+        "outDir": "app/assets/builds",
+        "moduleResolution": "node",
+        "lib": [
+            "DOM",
+            "ES2021"
+        ],
+        "paths": {}
+    },
+    "excludeDirectories": [
+        "**/node_modules",
+        "_build"
+    ]
+}
