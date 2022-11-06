@@ -18,13 +18,23 @@ body {
     position: fixed;
 }
 
+// hide scrollbars
+body * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body *::-webkit-scrollbar {
+    display: none;
+}
+
 #main-display {
     display: flex;
     grid-area: main;
     flex-flow: column;
     overflow: scroll;
     max-width: 80vw;
-    max-height: 60vh;
+    height: 50vh;
     background-color: $color-main-background;
     border: solid 1px white;
     border-radius: 5px;

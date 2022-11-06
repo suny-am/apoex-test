@@ -12164,3 +12164,85 @@ Processing by BeersController#index as HTML
 Completed 200 OK in 691ms (Views: 646.9ms | ActiveRecord: 0.0ms | Allocations: 38498)
 
 
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:10:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 346)
+  Rendered layout layouts/application.html.erb (Duration: 276.1ms | Allocations: 21476)
+Completed 200 OK in 335ms (Views: 292.6ms | ActiveRecord: 0.0ms | Allocations: 24873)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:11:28 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 367.1ms | Allocations: 14366)
+Completed 200 OK in 374ms (Views: 371.1ms | ActiveRecord: 0.0ms | Allocations: 14680)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:11:31 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 1788)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.0ms | Allocations: 2039)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:12:05 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 185.9ms | Allocations: 3110)
+Completed 200 OK in 202ms (Views: 197.1ms | ActiveRecord: 0.0ms | Allocations: 3361)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:12:06 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 109.0ms | Allocations: 1848)
+Completed 200 OK in 131ms (Views: 127.1ms | ActiveRecord: 0.0ms | Allocations: 2095)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:12:23 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 178.5ms | Allocations: 3166)
+Completed 200 OK in 188ms (Views: 184.1ms | ActiveRecord: 0.0ms | Allocations: 3413)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:12:36 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 343.8ms | Allocations: 3165)
+Completed 200 OK in 364ms (Views: 353.1ms | ActiveRecord: 0.0ms | Allocations: 3412)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:14:56 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 205.7ms | Allocations: 3151)
+Completed 200 OK in 216ms (Views: 211.9ms | ActiveRecord: 0.0ms | Allocations: 3398)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:15:12 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 217.5ms | Allocations: 3169)
+Completed 200 OK in 231ms (Views: 224.3ms | ActiveRecord: 0.0ms | Allocations: 3416)
+
+
