@@ -16,7 +16,7 @@ and various related information for users.
 - Clone this repo
 - Connect to the docker container in a VS Code Remote Containers environment
 - Navigate to the "brewscope" application folder.
-- Launch the server with "rails server" command.
+- Launch the server with the "rails server" command.
 - navigate to [http://localhost:3000](http://localhost:3000)
 
 ## Task analysis
