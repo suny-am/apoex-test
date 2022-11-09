@@ -7,9 +7,6 @@
 
 ## Description 
 
-Technica
-The goal
-
 A small application that utilizes the 
 [Punk API](https://punkapi.com/documentation/v2) to display craft beers
 and various related information for users.
