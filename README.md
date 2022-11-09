@@ -1,4 +1,4 @@
-# Brewscope (ApoEx technical evaluation test)
+# Brewscope
 
 ## Author/maintainer
 
@@ -7,8 +7,10 @@
 
 ## Description 
 
-Technical evaluation test for Apoex AB fullstack development position.
-The goal was to make a small application that utilized the 
+Technica
+The goal
+
+A small application that utilizes the 
 [Punk API](https://punkapi.com/documentation/v2) to display craft beers
 and various related information for users.
 
