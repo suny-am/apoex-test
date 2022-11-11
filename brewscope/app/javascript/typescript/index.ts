@@ -1,3 +1,4 @@
+import { Beer } from './interfaces'
 import * as Modules from './modules'
 
 const beerManager = new Modules.BeerManager()
@@ -9,26 +10,50 @@ export default class BeerFetcher
     /*
     |  general listeners for search input
     */
-    public async typeListen()
+    public async searchListen()
     {
         let searchQuery = document.querySelector('.search-field') as HTMLInputElement
-        let searchButton = document.querySelector('.search-button')
+        let rubySearchButton = document.querySelector('.rb-search-button')
+        let typeScriptSearchButton = document.querySelector('.ts-search-button')
         // add event listeners for search query submission 
-        searchQuery.addEventListener('keyup', (Event: KeyboardEvent) => this.search(Event, searchQuery.value))
-        searchButton.addEventListener('click', (Event: MouseEvent) => this.search(Event, searchQuery.value))
+        rubySearchButton.addEventListener('click', (Event: MouseEvent) => this.rubySearch(Event, searchQuery.value.replaceAll(" ", "_")))
+        typeScriptSearchButton.addEventListener('click', (Event: MouseEvent) => this.typeScriptSearch(Event, searchQuery.value.replaceAll(" ", "_")))
     }
 
-    public async search(Event: KeyboardEvent | MouseEvent, searchQuery: string)
+
+    /*
+    |   This search is handled mainly via ruby code. the js request here only serves to contact the backend
+    */
+    public async rubySearch(Event: MouseEvent, searchQuery: string)
     {
-        // check for relevant key presses
-        if (Event instanceof KeyboardEvent)
+        // let user know that a search term is mandatory and exit silently
+        let mainDisplay = document.querySelector('#main-display') as HTMLElement
+        if (searchQuery === undefined || searchQuery === null || searchQuery === "")
         {
-            // return silently if key is not "Enter"
-            if (Event.key !== 'Enter')
-            {
-                return
-            }
+            beerManager.cleanMainDisplay(mainDisplay, "Enter a search term to search for beers!")
+            return
         }
+
+        // ruby search endpoint
+        let rubyEndpoint = "http://localhost:3000/beers/search"
+
+        // send searchQuery in body via a simple post to the relevant ruby controller action
+        let request = new Request(rubyEndpoint)
+        let requestBody = searchQuery
+        fetch(request, { method: "POST", body: requestBody }).then(async (response) =>
+        {
+            // populate display with response from ruby controller search action
+            let beers = (await response.json())
+
+            beerManager.generateList(mainDisplay, beers[0])
+        })
+    }
+
+    /*
+    |   This search is handled mainly via Javascript. Ruby is largely only used for the view rendering.
+    */
+    public async typeScriptSearch(Event: KeyboardEvent | MouseEvent, searchQuery: string)
+    {
 
         // let user know that a search term is mandatory and exit silently
         let mainDisplay = document.querySelector('#main-display') as HTMLElement

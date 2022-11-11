@@ -61,7 +61,8 @@ body *::-webkit-scrollbar {
     border: 1px solid black
 }
 
-.search-button {
+.rb-search-button,
+.ts-search-button {
     all: unset;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
     border-top: 1px solid rgb(195, 143, 197);
@@ -70,16 +71,26 @@ body *::-webkit-scrollbar {
     height: auto;
     margin: 1rem;
     padding: 1rem;
-    color: $color_main_text;
-    background-color: $color_main_background;
+    filter: brightness(1);
     transition: all 1s;
+    cursor: pointer;
 }
 
-.search-button:hover {
+.rb-search-button {
+    color: rgb(221, 163, 163);
+    background-color: rgb(202, 67, 67);
+}
+
+.ts-search-button {
+    color: rgb(160, 160, 211);
+    background-color: rgb(72, 72, 211);
+}
+
+.rb-search-button:hover,
+.ts-search-button:hover {
     transition: all 1s;
+    filter: brightness(1.2);
     color: white;
-    background-color: rgb(165, 132, 210);
-    cursor: pointer;
 }
 
 .no-result-notice {

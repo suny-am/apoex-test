@@ -1,3 +1,3 @@
 import BeerFetcher from './typescript'
 
-new BeerFetcher().typeListen()
+new BeerFetcher().searchListen()

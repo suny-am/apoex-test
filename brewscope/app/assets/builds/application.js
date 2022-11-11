@@ -130,18 +130,28 @@
   var beerManager = new BeerManager();
   var punkApiRoot = "https://api.punkapi.com/v2/beers?per_page=80&";
   var BeerFetcher = class {
-    async typeListen() {
+    async searchListen() {
       let searchQuery = document.querySelector(".search-field");
-      let searchButton = document.querySelector(".search-button");
-      searchQuery.addEventListener("keyup", (Event) => this.search(Event, searchQuery.value));
-      searchButton.addEventListener("click", (Event) => this.search(Event, searchQuery.value));
+      let rubySearchButton = document.querySelector(".rb-search-button");
+      let typeScriptSearchButton = document.querySelector(".ts-search-button");
+      rubySearchButton.addEventListener("click", (Event) => this.rubySearch(Event, searchQuery.value.replaceAll(" ", "_")));
+      typeScriptSearchButton.addEventListener("click", (Event) => this.typeScriptSearch(Event, searchQuery.value.replaceAll(" ", "_")));
     }
-    async search(Event, searchQuery) {
-      if (Event instanceof KeyboardEvent) {
-        if (Event.key !== "Enter") {
-          return;
-        }
+    async rubySearch(Event, searchQuery) {
+      let mainDisplay = document.querySelector("#main-display");
+      if (searchQuery === void 0 || searchQuery === null || searchQuery === "") {
+        beerManager.cleanMainDisplay(mainDisplay, "Enter a search term to search for beers!");
+        return;
       }
+      let rubyEndpoint = "http://localhost:3000/beers/search";
+      let request = new Request(rubyEndpoint);
+      let requestBody = searchQuery;
+      fetch(request, { method: "POST", body: requestBody }).then(async (response) => {
+        let beers = await response.json();
+        beerManager.generateList(mainDisplay, beers[0]);
+      });
+    }
+    async typeScriptSearch(Event, searchQuery) {
       let mainDisplay = document.querySelector("#main-display");
       if (searchQuery === void 0 || searchQuery === null || searchQuery === "") {
         beerManager.cleanMainDisplay(mainDisplay, "Enter a search term to search for beers!");
@@ -174,6 +184,6 @@
   };
 
   // app/javascript/application.js
-  new BeerFetcher().typeListen();
+  new BeerFetcher().searchListen();
 })();
 //# sourceMappingURL=assets/application.js.map

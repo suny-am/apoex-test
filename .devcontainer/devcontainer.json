@@ -1,8 +1,8 @@
 {
-    "name": "Ruby on Rails & Postgres",
+    "name": "Brewscope",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
-    "workspaceFolder": "/workspaces/apoex_test/brewscope",
+    "workspaceFolder": "/workspaces/brewscope",
     "mounts": [
         "source=vscode-extensions-apoex,target=/home/vscode/.vscode-server/extensions,type=volume"
     ],
