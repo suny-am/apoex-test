@@ -20,3 +20,9 @@ and one in **Ruby** are available.
 - Navigate to the "brewscope" application folder.
 - Launch the server with the "rails server" command.
 - Navigate to [http://localhost:3000](http://localhost:3000)
+
+```
+> git clone https://github.com/suny-am/brewscope.git 
+> cd brewscope
+> rails server
+```
