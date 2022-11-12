@@ -6,14 +6,11 @@ export default class BeerManager
     | main function to generate the beer list for the client
     */
 
-    public async generateList(mainDisplay?: HTMLElement, beers?: Array<Beer>, pageList?: Array<Array<Beer>>, selectedPage?: number)
+    public generateList(mainDisplay?: HTMLElement, beers?: Array<Beer>, pageList?: Array<Array<Beer>>, selectedPage?: number)
     {
 
         // wip main display content if repopulating
-        mainDisplay.childNodes.forEach(childNode =>
-        {
-            childNode.remove()
-        })
+        mainDisplay.innerHTML = ""
 
         let currentPage = selectedPage ? selectedPage : 0
 

@@ -15958,3 +15958,326 @@ Processing by BeersController#index as HTML
 Completed 200 OK in 34ms (Views: 31.0ms | Allocations: 2022)
 
 
+Started GET "/" for 127.0.0.1 at 2022-11-11 20:36:56 +0000
+Started GET "/" for 127.0.0.1 at 2022-11-11 20:36:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BeersController#index as HTML
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 357)
+  Rendered beers/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 821.7ms | Allocations: 55021)
+Completed 200 OK in 879ms (Views: 849.5ms | ActiveRecord: 0.0ms | Allocations: 58858)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 969.0ms | Allocations: 69224)
+Completed 200 OK in 1018ms (Views: 995.3ms | ActiveRecord: 0.0ms | Allocations: 72772)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-12 07:38:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 353.3ms | Allocations: 21302)
+Completed 200 OK in 383ms (Views: 362.0ms | ActiveRecord: 0.0ms | Allocations: 24654)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:39:01 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 10)
+Completed 200 OK in 193ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 11933)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:39:07 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 8)
+Completed 200 OK in 128ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 8034)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:39:09 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 126ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 8032)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:39:15 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 132ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 8038)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-12 07:39:17 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 1986)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 2236)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:39:18 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 120ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 8031)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-12 07:39:20 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 1962)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 2213)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:39:37 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 130ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 6243)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:39:43 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 134ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 6246)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:39:54 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 127ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 6274)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-12 07:40:06 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 1956)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 2207)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:08 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 129ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 6243)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:23 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 139ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 6247)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:27 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 134ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 6250)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:30 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 149ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 6247)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:31 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 173ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 6257)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:32 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 130ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 6252)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:33 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 116ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 6249)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:33 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 129ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 6247)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:34 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 145ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 6252)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:35 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 138ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 6246)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:35 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 138ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 6267)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:36 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 135ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 6245)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:43 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 129ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 8030)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:44 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.5ms | Allocations: 7)
+Completed 200 OK in 126ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 8034)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:40:59 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 123ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 8028)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:41:02 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 126ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 8028)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:41:04 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 133ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 8026)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:41:05 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 143ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 8029)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:41:08 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 143ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 8028)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-12 07:41:27 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 1971)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms | Allocations: 2221)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-12 07:41:53 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 1790)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 2022)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-12 07:42:58 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 262.4ms | Allocations: 18318)
+Completed 200 OK in 266ms (Views: 264.7ms | ActiveRecord: 0.0ms | Allocations: 18552)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:42:59 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 149ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 8028)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:43:01 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 118ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 8032)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-12 07:43:25 +0000
+Processing by BeersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering beers/index.html.erb within layouts/application
+  Rendered beers/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 135.6ms | Allocations: 4997)
+Completed 200 OK in 139ms (Views: 138.0ms | ActiveRecord: 0.0ms | Allocations: 5246)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:43:26 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 124ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 8023)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:43:27 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 117ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 8029)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:43:29 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 135ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 8029)
+
+
+Started POST "/beers/search" for 127.0.0.1 at 2022-11-12 07:43:37 +0000
+Processing by BeersController#search as */*
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 127ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 6248)
+
+

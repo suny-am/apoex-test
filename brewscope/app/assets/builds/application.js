@@ -1,10 +1,8 @@
 (() => {
   // app/javascript/typescript/modules/BeerManager.ts
   var BeerManager = class {
-    async generateList(mainDisplay, beers, pageList, selectedPage) {
-      mainDisplay.childNodes.forEach((childNode) => {
-        childNode.remove();
-      });
+    generateList(mainDisplay, beers, pageList, selectedPage) {
+      mainDisplay.innerHTML = "";
       let currentPage = selectedPage ? selectedPage : 0;
       let pages = pageList ? pageList : new Array();
       if (pages.length === 0 && beers) {
