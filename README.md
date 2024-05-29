@@ -1,9 +1,9 @@
 # Brewscope
 
-## Author/maintainer
-
-- Carl Sandberg
-- Contact: [visualarea.1@gmail.com](visualarea.1@gmail.com)
+## Index
+- [Description](#description)
+- [Testing/Development](#testingdevelopment)
+- [Contact](#contact)
 
 ## Description 
 
@@ -13,16 +13,12 @@ and various related information for users.
 Two search functions, one in **Javascript** (compiled TypeScript) 
 and one in **Ruby** are available.
 
-## Usage
-
-- Clone this repository
-- Connect to the docker container in a VS Code Remote Containers environment
-- Navigate to the "brewscope" application folder.
-- Launch the server with the "rails server" command.
-- Navigate to [http://localhost:3000](http://localhost:3000)
-
+## Testing/Development
+```bash
+git clone https://github.com/suny-am/brewscope.git && \
+cd brewscope && \
+rails server # Default development address is http://localhost:3000
 ```
-> git clone https://github.com/suny-am/brewscope.git 
-> cd brewscope
-> rails server
-```
+
+## Contact
+[visualarea.1@gmail.com](visualarea.1@gmail.com)
